@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>选择程序</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+    }
+    .container {
+        text-align: center;
+        margin-top: 50px;
+    }
+    button {
+        padding: 10px 20px;
+        font-size: 18px;
+        cursor: pointer;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+    }
+    #result {
+        margin-top: 20px;
+        font-size: 24px;
+        font-weight: bold;
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h1>陈奕琳该不该参加北高的单招</h1>
+    <button onclick="drawWinner()">选择</button>
+    <div id="result"></div>
+</div>
+
+<script>
+function drawWinner() {
+    // 请在这里添加抽奖逻辑
+    var participants = ["去", "去", "去", "去", "去"]; // 参与者列表
+    var winner = participants[Math.floor(Math.random() * participants.length)]; // 从参与者列表中随机选取一个赢家
+    document.getElementById('result').innerText = "选择的结果是：" + winner; // 显示赢家
+}
+</script>
+
+</body>
+</html>
